@@ -8,22 +8,22 @@ public class Person {
     private int id;
     @NotEmpty(message = "Введите имя")
     @Pattern(regexp = "[А-Я][а-я]+\\s[А-Я][а-я]+\\s[А-Я][а-я]+", message = "Введите полное имя: Фамилия Имя Отчество")
-    private String full_name;
+    private String fullName;
     @Min(value = 1900, message = "Год рождения должен быть больше 1900")
-    private int birth_year;
+    private int birthYear;
 
-    public Person(int id, String full_name, int birth_year) {
+    public Person(int id, String fullName, int birthYear) {
         this.id = id;
-        this.full_name = full_name;
-        this.birth_year = birth_year;
+        this.fullName = fullName;
+        this.birthYear = birthYear;
     }
 
     public Person() {
     }
 
-    public Person(int id, String full_name) {
+    public Person(int id, String fullName) {
         this.id = id;
-        this.full_name = full_name;
+        this.fullName = fullName;
     }
 
     public int getId() {
@@ -34,19 +34,19 @@ public class Person {
         this.id = id;
     }
 
-    public String getFull_name() {
-        return full_name;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFull_name(String full_name) {
-        this.full_name = full_name;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 
-    public int getBirth_year() {
-        return birth_year;
+    public int getBirthYear() {
+        return birthYear;
     }
 
-    public void setBirth_year(int birth_year) {
-        this.birth_year = birth_year;
+    public void setBirthYear(int birthYear) {
+        this.birthYear = birthYear;
     }
 }

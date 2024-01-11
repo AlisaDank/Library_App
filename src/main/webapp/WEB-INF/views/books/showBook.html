@@ -16,7 +16,7 @@
         <label for="person">Выберите человека</label>
         <select th:object="${person}" th:field="*{id}" id="person">
             <option th:each="person : ${people}" th:value="${person.getId()}"
-            th:text="${person.getFull_name()}"></option>
+            th:text="${person.getFullName()}"></option>
         </select>
 
         <input type="submit" value="Назначить книгу"/>
@@ -24,7 +24,7 @@
 </div>
 
 <div th:unless="${owner} == null">
-    <p th:text="'Книга сейчас у: ' + ${owner.getFull_name()}"></p>
+    <p th:text="'Книга сейчас у: ' + ${owner.getFullName()}"></p>
     <br/>
     <form th:method="PATCH" th:action="@{/books/{id}/delete(id=${book.getId()})}">
         <input type="submit" value="Освободить книгу"/>

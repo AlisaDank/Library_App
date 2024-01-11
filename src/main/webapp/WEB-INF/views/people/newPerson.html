@@ -8,13 +8,13 @@
 
 <form th:method="POST" th:action="@{/people}" th:object="${person}">
     <label for="name">Введите ФИО: </label>
-    <input type="text" th:field="*{full_name}" id="name"/>
-    <div style="color: red" th:if="${#fields.hasErrors('full_name')}" th:errors="*{full_name}">Name error</div>
+    <input type="text" th:field="*{fullName}" id="name"/>
+    <div style="color: red" th:if="${#fields.hasErrors('fullName')}" th:errors="*{fullName}">Name error</div>
     <br/>
 
     <label for="year">Введите год рождения: </label>
-    <input type="text" th:field="*{birth_year}" id="year"/>
-    <div style="color: red" th:if="${#fields.hasErrors('birth_year')}" th:errors="*{birth_year}">Year error</div>
+    <input type="text" th:field="*{birthYear}" id="year"/>
+    <div style="color: red" th:if="${#fields.hasErrors('birthYear')}" th:errors="*{birthYear}">Year error</div>
     <br/>
     <input type="submit" value="Создать!"/>
 </form>
